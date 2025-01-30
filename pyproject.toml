@@ -4,7 +4,10 @@ version = "0.1"
 description = "Analyzes a comprehensive collection of Animal Crossing: New Horizons data"
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = []
+dependencies = [
+    "pandas>=2.2.3",
+    "pandas-stubs>=2.2.2.240807",
+]
 
 [dependency-groups]
 dev = [
@@ -21,13 +24,13 @@ lint = [
 [tool.poe.tasks]
 test = "pytest --cov --cov-report term-missing"
 
-_imports = "ruff check --select I --fix ."
-_format = "ruff format ."
+_imports = "ruff check --select I --fix database/ cli/ tests/"
+_format = "ruff format database/ cli/ tests/"
 format.sequence = ["_imports", "_format"]
 
-_type = "mypy ."
-_check = "ruff check ."
-_lint = "pylint database/"
+_type = "mypy database/ cli/"
+_check = "ruff check database/ cli/"
+_lint = "pylint database/ cli/"
 
 lint.sequence = ["_type", "_check", "_lint"]
 
