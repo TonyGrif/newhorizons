@@ -25,6 +25,15 @@
   in {
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [ unstable.uv ];
+
+      shellHook = ''
+        if [ -d ".venv" ]; then
+          source .venv/bin/activate
+        else
+          uv sync
+          source .venv/bin/activate
+        fi
+      '';
     };
   };
 }
