@@ -7,4 +7,4 @@ The source of this data can be found on [Kaggle](https://www.kaggle.com/datasets
 * [Pandas](https://pandas.pydata.org/)
 
 ## Running Instructions
-To run the main script, use `python scripts/main.py`. This will create a `newhorizons.db` sqlite file.
+To run the main script, use `python cli/main.py`. This will create a `newhorizons.db` sqlite file.
