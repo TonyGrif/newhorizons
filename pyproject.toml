@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "pandas>=2.2.3",
-    "pandas-stubs>=2.2.2.240807",
 ]
 
 [dependency-groups]
@@ -19,6 +18,7 @@ lint = [
     "mypy>=1.14.1",
     "pylint>=3.3.4",
     "ruff>=0.9.3",
+    "pandas-stubs>=2.2.2.240807",
 ]
 
 [tool.poe.tasks]

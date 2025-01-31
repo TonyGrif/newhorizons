@@ -206,8 +206,6 @@ version = "0.1"
 source = { editable = "." }
 dependencies = [
     { name = "pandas" },
-    { name = "pandas-stubs", version = "2.2.2.240807", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "pandas-stubs", version = "2.2.3.241126", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
 ]
 
 [package.dev-dependencies]
@@ -218,15 +216,14 @@ dev = [
 ]
 lint = [
     { name = "mypy" },
+    { name = "pandas-stubs", version = "2.2.2.240807", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "pandas-stubs", version = "2.2.3.241126", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "pylint" },
     { name = "ruff" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "pandas", specifier = ">=2.2.3" },
-    { name = "pandas-stubs", specifier = ">=2.2.2.240807" },
-]
+requires-dist = [{ name = "pandas", specifier = ">=2.2.3" }]
 
 [package.metadata.requires-dev]
 dev = [
@@ -236,6 +233,7 @@ dev = [
 ]
 lint = [
     { name = "mypy", specifier = ">=1.14.1" },
+    { name = "pandas-stubs", specifier = ">=2.2.2.240807" },
     { name = "pylint", specifier = ">=3.3.4" },
     { name = "ruff", specifier = ">=0.9.3" },
 ]
