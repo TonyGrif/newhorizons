@@ -15,5 +15,5 @@ class Database:
             return
         self.connection = sqlite3.connect("newhorizons.db")
 
-    def add_table(self, name: str, frame: pd.DataFrame):
+    def add_table(self, name: str, frame: pd.DataFrame) -> None:
         frame.to_sql(name, self.connection, index=False)
