@@ -8,6 +8,9 @@ dependencies = [
     "pandas>=2.2.3",
 ]
 
+[project.scripts]
+newhorizons = "cli:create"
+
 [dependency-groups]
 dev = [
     "poethepoet>=0.32.2",
@@ -39,4 +42,4 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["database/"]
+packages = ["database/", "cli/"]

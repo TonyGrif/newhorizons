@@ -8,7 +8,7 @@ import pandas as pd
 from database import Database
 
 
-def main():
+def create():
     """Main drive for database creation"""
 
     _ = argparse.ArgumentParser(
@@ -28,4 +28,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    create()
